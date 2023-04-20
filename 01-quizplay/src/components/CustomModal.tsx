@@ -17,7 +17,7 @@ export default function CustomModal({
 }: Props) {
   return (
     <Modal open={showModal} onClose={resetQuiz} showCloseIcon={false} center>
-      <div className="w-96">
+      <div className="w-96 max-sm:max-w-[300px]">
         <h2 className="text-center pb-2 font-semibold text-2xl tracking-[0.5px]">
           {score > allQuestion.length / 2 ? "Felicitaciones!" : "Oops!"}
         </h2>

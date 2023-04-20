@@ -17,6 +17,7 @@ function App() {
   const [showNextButton, setShowNextButton] = useState(false);
   const [isOptionsDisabled, setIsOptionsDisabled] = useState(false);
   const [loading, setLoading] = useState(true);
+  const [progress, setProgress] = useState(0);
 
   //seleccionar categoria
   const handleCategory = (category: string) => {
@@ -28,6 +29,7 @@ function App() {
     setShowNextButton(false);
     setIsOptionsDisabled(false);
     setLoading(true);
+    setProgress(0);
   };
 
   //filtrar por categoria
@@ -61,6 +63,7 @@ function App() {
       setCorrectOption("");
       setIsOptionsDisabled(false);
     }
+    setProgress(currentQuestionIndex + 1);
   };
 
   //reiniciar el juego
@@ -72,6 +75,7 @@ function App() {
     setScore(0);
     setIsOptionsDisabled(false);
     setShowNextButton(false);
+    setProgress(0);
   };
 
   //quitar loading
@@ -79,10 +83,20 @@ function App() {
     setTimeout(() => setLoading(false), 300);
   }, [selectCategory]);
 
+  const percentage = Math.floor(
+    (progress / filterQuestionCategory.length) * 100
+  );
+
   return (
     <div className="bg-gray-950">
       <div className="container mx-auto h-screen flex flex-col justify-between">
         <div>
+          <div className="w-full border-2 border-stone-600 rounded-full h-4.5 dark:bg-gray-700 max-w-xl max-sm:max-w-[350px] mx-auto my-10">
+            <div
+              style={{ width: `${percentage}%` }}
+              className="bg-orange-600 h-2.5 rounded-full max-w-xl max-sm:max-w-[350px] transition-all ease-out duration-1000"
+            />
+          </div>
           <SelectCategory
             handleCategory={handleCategory}
             selectCategory={selectCategory}
@@ -110,7 +124,7 @@ function App() {
         </div>
         {showNextButton && (
           <div>
-            <div className="flex justify-end mb-10 max-w-xl mx-auto">
+            <div className="flex justify-end mb-24 max-w-xl max-sm:max-w-[350px] mx-auto">
               <button
                 disabled={currentOptionSelected !== "" ? false : true}
                 className={`${

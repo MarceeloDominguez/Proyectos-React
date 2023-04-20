@@ -21,7 +21,7 @@ export default function AnswerOptions({
 }: Props) {
   return (
     <div>
-      <div className="max-w-xl mx-auto mt-10">
+      <div className="max-w-xl max-sm:max-w-[350px] mx-auto mt-10">
         {allQuestion[currentQuestionIndex].options.map((item, index) => {
           return (
             <div

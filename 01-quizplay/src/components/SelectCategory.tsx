@@ -10,7 +10,7 @@ export default function SelectCategory({
   selectCategory,
 }: Props) {
   return (
-    <div className="max-w-xl mx-auto flex space-x-4 mt-4">
+    <div className="max-w-xl max-sm:max-w-[350px] mx-auto flex space-x-4 mt-4">
       {listCategory.map((item, index) => {
         return (
           <div

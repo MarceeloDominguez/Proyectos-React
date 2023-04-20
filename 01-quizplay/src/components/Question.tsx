@@ -7,7 +7,7 @@ type Props = {
 
 export default function Question({ currentQuestionIndex, allQuestion }: Props) {
   return (
-    <div className="text-start max-w-xl mx-auto py-5">
+    <div className="text-start max-w-xl max-sm:max-w-[350px] mx-auto py-5">
       <span className="font-bold text-slate-200">
         {currentQuestionIndex + 1}/{allQuestion.length}
       </span>
