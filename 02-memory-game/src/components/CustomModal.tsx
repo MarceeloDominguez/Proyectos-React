@@ -10,7 +10,7 @@ type Props = {
 export default function CustomModal({ playerWin, resetGame, error }: Props) {
   return (
     <Modal
-      open={playerWin || error === 5 ? true : false}
+      open={playerWin || error === 7 ? true : false}
       onClose={() => false}
       showCloseIcon={false}
       center

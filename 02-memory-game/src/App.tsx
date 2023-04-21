@@ -53,7 +53,7 @@ function App() {
         </h1>
         <div className="flex flex-row justify-between max-w-xl max-sm:max-w-[350px] mx-auto mb-8">
           <span className="text-slate-200  tracking-[1px] font-rubik">
-            Error: {error} / 5
+            Error: {error} / 7
           </span>
           <span className="text-slate-200 tracking-[1px] font-rubik">
             Score: {score}
