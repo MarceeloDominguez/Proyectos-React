@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "Rubik";
+  font-style: normal;
+  font-weight: 400;
+  src: local("Rubik Regular"), local("Rubik-Regular"),
+    url("assets/fonts/Rubik-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Rubik";
+  font-style: normal;
+  font-weight: 700;
+  src: local("Rubik Bold"), local("Rubik-Bold"),
+    url("assets/fonts/Rubik-Bold.ttf") format("truetype");
+}
+
+.bold-text {
+  font-family: "Rubik", sans-serif;
+  font-weight: 700;
+}
+
+.regular-text {
+  font-family: "Rubik", sans-serif;
+  font-weight: 400;
+}
