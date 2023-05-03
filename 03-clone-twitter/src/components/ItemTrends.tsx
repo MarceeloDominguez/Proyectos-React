@@ -14,7 +14,7 @@ export default function ItemTrends({ item }: Prop) {
         <p className="text-small tracking-[0.4px] text-slate-500 regular-text">
           {trendCountry}
         </p>
-        <p className="text-medium tracking-[0.4px] text-slate-50 regular-text">
+        <p className="text-medium tracking-[0.4px] text-slate-50 bold-text">
           #{trend}
         </p>
         <p className="text-small tracking-[0.4px] text-slate-500 regular-text">

@@ -9,7 +9,7 @@ import { listFollowsSuggestion, trends } from "../data/data";
 export default function Aside() {
   return (
     <aside className="bg-primary hidden xl:flex flex-col max-w-[350px]">
-      <div className="sticky top-0">
+      <div className="sticky top-0 overflow-hidden">
         <Search />
         <div className="bg-secondary rounded-xl">
           <TitleCardAside title="Qué está pasando" />
@@ -22,7 +22,7 @@ export default function Aside() {
           <ShowMore title="Mostrar más" />
         </div>
         <div className="bg-secondary rounded-xl mt-3">
-          <TitleCardAside title=" A quíen seguir" />
+          <TitleCardAside title="A quíen seguir" />
 
           {/* lista de sugerencia de seguidores  */}
           {listFollowsSuggestion.map((item, index) => {
