@@ -11,6 +11,7 @@ export default {
         primary: "#15202b",
         secondary: "#1e2732",
         button: "#1d9bf0",
+        borderColor: "#404850",
       },
     },
   },
