@@ -7,6 +7,13 @@ import { HiOutlineDotsCircleHorizontal } from "react-icons/hi";
 import { IoPeopleOutline } from "react-icons/all";
 import { RxTwitterLogo } from "react-icons/all";
 import { AiOutlineMail } from "react-icons/ai";
+//icon input main
+import { IoLocationOutline } from "react-icons/all";
+import { BsImage } from "react-icons/bs";
+import { CiFaceSmile } from "react-icons/ci";
+import { BsCalendarEvent } from "react-icons/bs";
+import { IoOptionsSharp } from "react-icons/all";
+import { AiOutlineFileGif } from "react-icons/ai";
 
 export const listFollowsSuggestion = [
   {
@@ -86,4 +93,13 @@ export const navItems = [
     title: "Más opciones",
     icon: HiOutlineDotsCircleHorizontal,
   },
+];
+
+export const iconInputMain = [
+  { icon: BsImage },
+  { icon: AiOutlineFileGif },
+  { icon: IoOptionsSharp },
+  { icon: CiFaceSmile },
+  { icon: BsCalendarEvent },
+  { icon: IoLocationOutline },
 ];
