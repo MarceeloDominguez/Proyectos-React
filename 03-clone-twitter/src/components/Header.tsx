@@ -6,7 +6,7 @@ type Prop = {
 
 export default function Header({ tabs, handleSelected, selectedTab }: Prop) {
   return (
-    <header className="backdrop-blur-xl bg-primary/50 sticky top-0 h-[105px] border-b border-borderColor">
+    <header className="backdrop-blur-xl bg-primary/50 sticky top-0 h-[105px] border-b border-borderColor z-10">
       <h2 className="text-xl leading-none tracking-[0.4px] pb-4 text-slate-50 regular-text p-4 cursor-pointer">
         Inicio
       </h2>
