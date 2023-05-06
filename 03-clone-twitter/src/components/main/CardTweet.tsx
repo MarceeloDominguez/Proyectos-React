@@ -1,11 +1,16 @@
 import { BiDotsHorizontalRounded } from "react-icons/Bi";
 import { BsFillPatchCheckFill } from "react-icons/bs";
-import { data, iconTweet } from "../../data/data";
+import IconsCardTweet from "./IconsCardTweet";
+import { Data } from "../../interface/data";
 
-export default function CardTweet() {
+type Prop = {
+  tweets: Data[];
+};
+
+export default function CardTweet({ tweets }: Prop) {
   return (
     <div>
-      {data.map((item, index) => {
+      {tweets.map((item, index) => {
         return (
           <div
             key={index}
@@ -51,16 +56,7 @@ export default function CardTweet() {
                     item.image === null && "mt-3"
                   }`}
                 >
-                  {iconTweet.map((item, index) => {
-                    const Icon = item.icon;
-
-                    return (
-                      <div key={index} className="flex items-center gap-2 mb-1">
-                        <Icon className="text-lg text-gray-400" />
-                        <span className="text-medium text-gray-400">0</span>
-                      </div>
-                    );
-                  })}
+                  <IconsCardTweet item={item} />
                 </div>
               </div>
               <div className="absolute right-0">

@@ -2,7 +2,7 @@ import { navItems } from "../data/data";
 import ItemsNav from "./ItemsNav";
 import { GrTwitter } from "react-icons/gr";
 import { BiDotsHorizontalRounded } from "react-icons/Bi";
-import { SlPencil } from "react-icons/sl";
+import { FaFeatherAlt } from "react-icons/all";
 import ItemsNavResponsive from "./ItemsNavResponsive";
 
 export default function NavList() {
@@ -51,7 +51,7 @@ export default function NavList() {
           })}
           <div className="flex justify-center mt-4">
             <button className="bg-button w-12 h-12 rounded-full flex items-center justify-center">
-              <SlPencil className="text-xl text-slate-50" />
+              <FaFeatherAlt className="text-xl text-slate-50" />
             </button>
           </div>
         </div>
