@@ -11,7 +11,7 @@ export default function ViewForYou({ loading }: Prop) {
   const { tweetsForYou } = useTweetsContext();
 
   return (
-    <div>
+    <div className="overflow-hidden bg-primary">
       <InputMain />
       {loading ? <Loading /> : <CardTweet tweets={tweetsForYou} />}
     </div>

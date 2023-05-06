@@ -24,9 +24,9 @@ function App() {
 
   return (
     <main className="bg-primary">
-      <div className="bg-primary min-h-screen xl:max-w-7xl max-w-3xl mx-auto flex gap-6 pr-2">
+      <div className="bg-primary min-h-screen xl:max-w-7xl max-w-3xl mx-auto flex xl:gap-6 pr-2">
         <NavList />
-        <div className="w-full border-x border-borderColor">
+        <div className="w-full border-x border-borderColor bg-primary">
           <Header
             tabs={tabs}
             handleSelected={handleSelected}

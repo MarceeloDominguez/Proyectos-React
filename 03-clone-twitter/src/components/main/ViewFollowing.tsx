@@ -11,7 +11,7 @@ export default function ViewFollowing({ loading }: Prop) {
   const { tweetsFollowing } = useTweetsContext();
 
   return (
-    <div>
+    <div className="overflow-hidden bg-primary">
       <InputMain />
       {loading ? <Loading /> : <CardTweet tweets={tweetsFollowing} />}
     </div>

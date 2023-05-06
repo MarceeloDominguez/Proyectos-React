@@ -11,7 +11,7 @@ export default function InputMain() {
         <img
           src="https://randomuser.me/api/portraits/men/1.jpg"
           alt="avatar"
-          className="w-14 h-14 rounded-full mr-2 cursor-pointer"
+          className="lg:w-14 lg:h-14 w-10 h-10 rounded-full mr-2 cursor-pointer"
         />
         <div className="flex-1 flex items-center">
           <input
@@ -24,7 +24,7 @@ export default function InputMain() {
         </div>
       </div>
       <div className="flex mt-4">
-        <div className="flex-1 ml-16 px-1 flex items-center cursor-pointer">
+        <div className="flex-1 lg:ml-16 sm:ml-16 px-1 flex items-center cursor-pointer">
           {iconInputMain.map((item, index) => {
             const Icon = item.icon;
             return (

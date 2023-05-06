@@ -19,26 +19,26 @@ export default function CardTweet({ tweets }: Prop) {
             <img
               src={item.avatar}
               alt="avatar-user"
-              className="w-14 h-14 rounded-full"
+              className="lg:w-14 lg:h-14 w-10 h-10 rounded-full"
             />
             <div className="flex flex-1 pl-2 relative">
               <div className="flex flex-1 flex-col p-1">
                 <div className="flex gap-2 items-end">
-                  <span className="bold-text text-lg text-slate-50 tracking-[0.4px] capitalize">
+                  <span className="bold-text lg:text-lg sm:text-lg text-sm text-slate-50 tracking-[0.4px] capitalize">
                     {item.name}
                   </span>
                   {item.verifield && (
-                    <BsFillPatchCheckFill className="text-button mb-[5px]" />
+                    <BsFillPatchCheckFill className="text-button lg:mb-[5px] sm:mb-[5px] mb-[3px]" />
                   )}
-                  <span className="regular-text text-medium tracking-[0.4px] text-slate-500">
+                  <span className="regular-text lg:text-medium sm:text-medium text-[12px] tracking-[0.4px] text-slate-500">
                     {item.nickname}
                   </span>
-                  <span className="regular-text text-medium tracking-[0.4px] text-slate-500">
+                  <span className="regular-text lg:text-medium sm:text-medium text-[12px] tracking-[0.4px] text-slate-500">
                     {item.time}
                   </span>
                 </div>
                 <div>
-                  <p className="text-[16px] text-slate-50 tracking-[0.2px] max-h-[250px] overflow-hidden">
+                  <p className="lg:text-[16px] sm:text-[16px] text-sm  text-slate-50 tracking-[0.2px] max-h-[250px] overflow-hidden">
                     {item.description}
                   </p>
                 </div>
@@ -52,7 +52,7 @@ export default function CardTweet({ tweets }: Prop) {
                   </div>
                 )}
                 <div
-                  className={`flex justify-between mr-20 ${
+                  className={`flex justify-between xl:mr-20 ${
                     item.image === null && "mt-3"
                   }`}
                 >
