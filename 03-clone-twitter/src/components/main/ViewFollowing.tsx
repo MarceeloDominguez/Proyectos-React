@@ -1,14 +1,19 @@
 import CardTweet from "./CardTweet";
 import InputMain from "./InputMain";
 import { useTweetsContext } from "../../context/TweetContext";
+import Loading from "../Loading";
 
-export default function ViewFollowing() {
+type Prop = {
+  loading: boolean;
+};
+
+export default function ViewFollowing({ loading }: Prop) {
   const { tweetsFollowing } = useTweetsContext();
 
   return (
     <div>
       <InputMain />
-      <CardTweet tweets={tweetsFollowing} />
+      {loading ? <Loading /> : <CardTweet tweets={tweetsFollowing} />}
     </div>
   );
 }

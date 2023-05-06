@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Aside from "./components/Aside";
 import Header from "./components/Header";
 import NavList from "./components/NavList";
@@ -9,9 +9,17 @@ const tabs = ["Para ti", "Siguiendo"];
 
 function App() {
   const [selectedTab, setSelectedTab] = useState(0);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setLoading(false);
+    }, 500);
+  }, [loading]);
 
   const handleSelected = (index: number) => {
     setSelectedTab(index);
+    setLoading(true);
   };
 
   return (
@@ -24,8 +32,8 @@ function App() {
             handleSelected={handleSelected}
             selectedTab={selectedTab}
           />
-          {selectedTab === 0 && <ViewForYou />}
-          {selectedTab === 1 && <ViewFollowing />}
+          {selectedTab === 0 && <ViewForYou loading={loading} />}
+          {selectedTab === 1 && <ViewFollowing loading={loading} />}
         </div>
         <Aside />
       </div>

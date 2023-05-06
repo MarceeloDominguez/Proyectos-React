@@ -16,7 +16,7 @@ export default function InputMain() {
         <div className="flex-1 flex items-center">
           <input
             placeholder="¿Qué está pasando?"
-            className="w-full py-2 px-2 regular-text text-xl text-slate-50 placeholder:text-gray-600 tracking-[0.4px] bg-primary outline-none"
+            className="w-full py-2 px-2 regular-text text-xl text-slate-50 placeholder:text-gray-400 tracking-[0.4px] bg-primary outline-none"
             value={inputValue.description}
             name="description"
             onChange={handleChange}
@@ -30,9 +30,9 @@ export default function InputMain() {
             return (
               <div
                 key={index}
-                className="w-9 h-9 mr-2 flex justify-center items-center rounded-full hover:bg-button/20"
+                className="w-8 h-8 mr-2 flex justify-center items-center rounded-full hover:bg-button/20"
               >
-                <Icon className="text-button text-xl" />
+                <Icon className="text-button text-[18px]" />
               </div>
             );
           })}
