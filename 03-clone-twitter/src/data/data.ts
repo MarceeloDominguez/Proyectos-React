@@ -6,7 +6,7 @@ import { RiNotificationLine } from "react-icons/Ri";
 import { IoPersonOutline } from "react-icons/all";
 import { BsBookmark } from "react-icons/all";
 import { HiOutlineDotsCircleHorizontal } from "react-icons/hi";
-import { IoPeopleOutline } from "react-icons/all";
+import { RiFileListLine } from "react-icons/all";
 import { RxTwitterLogo } from "react-icons/all";
 import { AiOutlineMail } from "react-icons/ai";
 //icon input main
@@ -68,16 +68,16 @@ export const navItems = [
     icon: BiHash,
   },
   {
-    title: "Comunidades",
-    icon: IoPeopleOutline,
-  },
-  {
     title: "Notificaciones",
     icon: RiNotificationLine,
   },
   {
     title: "Mensajes",
     icon: AiOutlineMail,
+  },
+  {
+    title: "Listas",
+    icon: RiFileListLine,
   },
   {
     title: "Guardados",
