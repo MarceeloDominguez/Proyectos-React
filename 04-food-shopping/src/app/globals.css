@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.bg-image {
+  background-image: url("../../public/Background.png");
+  background-size: contain;
+}
+
+.bg-hero-image {
+  background-image: url("../../public/Photo.png");
+  background-size: cover;
+}
