@@ -1,8 +1,8 @@
-import React from "react";
-import Image from "next/image";
 import Link from "next/link";
 import { BiSearch } from "react-icons/bi";
 import { LuShoppingCart } from "react-icons/lu";
+import Logo from "./Logo";
+import NavbarResponsive from "./NavbarResponsive";
 
 const links = [
   { label: "Home", route: "/" },
@@ -12,12 +12,11 @@ const links = [
 
 export default function Navbar() {
   return (
-    <nav className="bg-[#fff] py-10 fixed left-0 right-0 h-navbar z-50">
-      <div className="container mx-auto flex justify-between">
+    <nav className="bg-[#fff] lg:py-10 py-4 fixed left-0 right-0 lg:h-navbar h-responsiveNavbar z-50">
+      {/* full screen */}
+      <div className="container mx-auto lg:flex hidden justify-between">
         <div className="flex gap-[150px] items-center">
-          <Link href={"/"}>
-            <Image src="/logo.svg" alt="Logo" width={198} height={54} />
-          </Link>
+          <Logo width={198} height={54} />
           <ul className="flex gap-10">
             {links.map((item, index) => (
               <Link
@@ -45,6 +44,8 @@ export default function Navbar() {
           </div>
         </div>
       </div>
+      {/* responsive screen */}
+      <NavbarResponsive />
     </nav>
   );
 }

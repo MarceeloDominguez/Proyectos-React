@@ -14,6 +14,7 @@ module.exports = {
       },
       height: {
         navbar: "144px",
+        responsiveNavbar: "70px",
       },
       fontFamily: {
         yellowtail: ["Yellowtail-Regular"],

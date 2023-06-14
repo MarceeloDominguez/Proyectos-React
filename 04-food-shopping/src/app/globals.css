@@ -10,4 +10,5 @@
 .bg-hero-image {
   background-image: url("../../public/Photo.png");
   background-size: cover;
+  background-repeat: no-repeat;
 }
