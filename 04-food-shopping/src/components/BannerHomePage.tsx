@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import { AiOutlineArrowRight } from "react-icons/ai";
+import CustomButton from "./CustomButton";
 
 export default function BannerHomePage() {
   return (
@@ -32,10 +32,10 @@ export default function BannerHomePage() {
             className="rounded-[8px]"
           />
           <div className="absolute md:top-28 top-10 md:left-12 left-8">
-            <span className="md:text-[20px] text-[13px] font-yellowtail italic text-[#7EB693] md:leading-[39px]">
+            <span className="md:text-[20px] text-[13px] font-yellowtail italic text-textSecondary md:leading-[39px]">
               Offer!!!
             </span>
-            <p className="md:text-[36px] text-[22px] max-w-[255px] text-[#274C5B] font-bold md:leading-[47px]">
+            <p className="md:text-[36px] text-[22px] max-w-[255px] text-textPrimary font-bold md:leading-[47px]">
               Get 10% off on Vegetables
             </p>
           </div>
@@ -53,10 +53,10 @@ export default function BannerHomePage() {
           </div>
           <div className="lg:pt-[50px] pt-[25px] flex-1">
             <div className="md:mx-10 lg:mx-4 mx-4 lg:max-w-[550px]">
-              <span className="text-[#7EB693] text-[24px] font-yellowtail italic">
+              <span className="text-textSecondary text-[24px] font-yellowtail italic">
                 About Us
               </span>
-              <p className="text-[#274C5B] text-[40px] leading-[49px] font-bold">
+              <p className="text-textPrimary text-[40px] leading-[49px] font-bold">
                 We Believe in Working Accredited Farmers
               </p>
               <p className="text-[#525C60] text-[16px] mt-3 leading-[24px]">
@@ -77,7 +77,7 @@ export default function BannerHomePage() {
                   />
                 </div>
                 <div>
-                  <h2 className="text-[#274C5B] font-bold text-lg">
+                  <h2 className="text-textPrimary font-bold text-lg">
                     Organic Foods Only
                   </h2>
                   <p className="text-[#525C60] text-[16px] mt-1 max-w-[320px]">
@@ -96,7 +96,7 @@ export default function BannerHomePage() {
                   />
                 </div>
                 <div>
-                  <h2 className="text-[#274C5B] font-bold text-lg">
+                  <h2 className="text-textPrimary font-bold text-lg">
                     Quality Standards
                   </h2>
                   <p className="text-[#525C60] text-[16px] mt-1 max-w-[320px]">
@@ -105,14 +105,13 @@ export default function BannerHomePage() {
                   </p>
                 </div>
               </div>
-              <div className="mt-[46px] bg-[#274C5B] w-[220px] py-4 rounded-[8px] flex justify-center">
-                <span className="text-sm font-semibold text-[#fff] flex items-center gap-2">
-                  Shop Now
-                  <div className="bg-[#335B6B] rounded-full w-5 h-5 flex justify-center items-center">
-                    <AiOutlineArrowRight size={12} color="#fff" />
-                  </div>
-                </span>
-              </div>
+              <CustomButton
+                title="Shop Now"
+                bgColor="#274C5B"
+                color="#fff"
+                bgColorContainerArrow="#335B6B"
+                route="/shop"
+              />
             </div>
           </div>
         </div>

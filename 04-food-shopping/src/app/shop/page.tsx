@@ -1,5 +1,5 @@
 import React from "react";
 
 export default function Shop() {
-  return <div>Shop</div>;
+  return <div className="bg-red-400 h-screen">Shop</div>;
 }

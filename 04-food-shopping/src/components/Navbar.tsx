@@ -22,7 +22,7 @@ export default function Navbar() {
               <Link
                 href={item.route}
                 key={index}
-                className="text-[#274C5B] text-xl font-semibold"
+                className="text-textPrimary text-xl font-semibold"
               >
                 {item.label}
               </Link>
@@ -37,10 +37,10 @@ export default function Navbar() {
             </div>
           </div>
           <div className="h-12 w-[150px] rounded-[32px] bg-[#FAFAFA] flex items-center pl-1 gap-2">
-            <div className="bg-[#274C5B] h-10 w-10 rounded-full flex items-center justify-center">
+            <div className="bg-textPrimary h-10 w-10 rounded-full flex items-center justify-center">
               <LuShoppingCart size={20} color="#fff" />
             </div>
-            <span className="text-lg text-[#274C5B] font-bold">Cart(0)</span>
+            <span className="text-lg text-textPrimary font-bold">Cart(0)</span>
           </div>
         </div>
       </div>

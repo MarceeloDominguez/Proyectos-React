@@ -12,7 +12,7 @@ export default function NavbarResponsive() {
     <nav className="lg:hidden flex justify-between items-center container mx-auto px-5">
       <AiOutlineMenu size={22} onClick={() => setShowMenu(true)} />
       <Logo width={100} height={54} />
-      <div className="bg-[#274C5B] h-8 w-8 rounded-full flex items-center justify-center">
+      <div className="bg-textPrimary h-8 w-8 rounded-full flex items-center justify-center">
         <LuShoppingCart size={16} color="#fff" />
       </div>
       <div

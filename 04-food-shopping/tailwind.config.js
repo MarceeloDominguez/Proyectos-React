@@ -19,6 +19,10 @@ module.exports = {
       fontFamily: {
         yellowtail: ["Yellowtail-Regular"],
       },
+      colors: {
+        textPrimary: "#274C5B",
+        textSecondary: "#7EB693",
+      },
     },
   },
   plugins: [],
