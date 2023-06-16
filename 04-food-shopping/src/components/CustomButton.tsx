@@ -6,7 +6,7 @@ type Prop = {
   bgColor: string;
   bgColorContainerArrow: string;
   color: string;
-  route?: string;
+  route: string;
 };
 
 export default function CustomButton({ ...prop }: Prop) {
@@ -14,7 +14,7 @@ export default function CustomButton({ ...prop }: Prop) {
 
   return (
     <Link
-      href={route!}
+      href={route}
       style={{ background: bgColor }}
       className="mt-[46px] w-[220px] py-4 rounded-[8px] flex justify-center"
     >

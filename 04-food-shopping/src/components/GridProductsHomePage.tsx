@@ -10,7 +10,7 @@ export default function GridProductsHomePage() {
       {products.map((item, index) => (
         <div key={index} className="flex justify-center">
           <Link
-            href={``}
+            href={`/product/${item.id}`}
             className="bg-white rounded-[16px] pt-14 max-w-[335px] shadow-sm relative"
           >
             <span className="bg-textPrimary absolute top-5 left-6 px-3 py-1 rounded-md">
