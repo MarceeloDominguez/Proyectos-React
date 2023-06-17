@@ -1,4 +1,6 @@
-export const products = [
+import { Product } from "@/interface/product";
+
+export const products: Product[] = [
   {
     image: "/products/producto-1.png",
     name: "Calabrese Broccoli",
@@ -53,6 +55,34 @@ export const products = [
     name: "Zelco Suji Elaichi Rusk",
     price: "15.00",
     category: "fresh",
-    id: 8,
+    id: "8",
+  },
+  {
+    image: "/products/producto-9.png",
+    name: "Mung Bean",
+    price: "11.00",
+    category: "health",
+    id: "9",
+  },
+  {
+    image: "/products/producto-10.png",
+    name: "White Hezelnut",
+    price: "12.00",
+    category: "nuts",
+    id: "10",
+  },
+  {
+    image: "/products/producto-11.png",
+    name: "Fresh Corn",
+    price: "17.00",
+    category: "fresh",
+    id: "11",
+  },
+  {
+    image: "/products/producto-12.png",
+    name: "Organic Almonds",
+    price: "15.00",
+    category: "fresh",
+    id: "12",
   },
 ];

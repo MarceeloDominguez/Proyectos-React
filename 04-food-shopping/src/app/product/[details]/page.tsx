@@ -1,4 +1,7 @@
 import Footer from "@/components/Footer";
+import Newsletter from "@/components/Newsletter";
+import RandomProduct from "@/components/RandomProduct";
+import TabsDescriptionProduct from "@/components/TabsDescriptionProduct";
 import { products } from "@/data/products";
 import Image from "next/image";
 import { AiOutlineArrowRight, AiTwotoneStar } from "react-icons/ai";
@@ -14,7 +17,7 @@ export default function DetailsProduct({ params }: Prop) {
   return (
     <div className="lg:pt-[144px] pt-[70px] overflow-hidden bg-[#F9F8F8]">
       <div className="lg:min-h-[calc(100vh-theme('height.navbar'))] min-h-[calc(100vh-theme('height.responsiveNavbar'))">
-        <div className="lg:h-[calc(100vh-theme('height.navbar'))] h-[calc(120vh-theme('height.responsiveNavbar'))]">
+        <div className="lg:h-[calc(100vh-theme('height.navbar'))] h-[calc(110vh-theme('height.responsiveNavbar'))]">
           {/* banner */}
           <div className="flex relative">
             <img
@@ -43,7 +46,7 @@ export default function DetailsProduct({ params }: Prop) {
                   alt="imagen-del-producto"
                   width={325}
                   height={325}
-                  className="rounded-lg shadow-sm md:h-[300px] lg:h-[325px] md:w-[300px] lg:w-[325px]"
+                  className="rounded-lg shadow-sm md:h-[300px] lg:h-[325px] md:w-[300px] lg:w-[325px] h-[275px] w-[275px]"
                 />
                 <span className="bg-textPrimary absolute top-5 left-6 px-3 py-1 rounded-md">
                   <p className="text-white text-[12px] capitalize tracking-[0.5px]">
@@ -93,6 +96,9 @@ export default function DetailsProduct({ params }: Prop) {
           </div>
         </div>
       </div>
+      <TabsDescriptionProduct />
+      <RandomProduct />
+      <Newsletter />
       <Footer />
     </div>
   );

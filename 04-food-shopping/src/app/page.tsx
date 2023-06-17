@@ -2,6 +2,7 @@ import BannerHomePage from "@/components/BannerHomePage";
 import ProductsHomePage from "@/components/ProductsHomePage";
 import CustomButton from "@/components/CustomButton";
 import Footer from "@/components/Footer";
+import Newsletter from "@/components/Newsletter";
 
 //calculo en largo de la pantalla y le resto el tamaño del navbar
 //h-[calc(100vh-theme('height.navbar'))]
@@ -41,6 +42,7 @@ export default function Home() {
       <BannerHomePage />
       {/*grid de productos en home*/}
       <ProductsHomePage />
+      <Newsletter />
       {/* footer */}
       <Footer />
     </main>
