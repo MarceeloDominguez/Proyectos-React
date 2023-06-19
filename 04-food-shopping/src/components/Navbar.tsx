@@ -1,8 +1,10 @@
+"use client";
 import Link from "next/link";
 import { BiSearch } from "react-icons/bi";
 import { LuShoppingCart } from "react-icons/lu";
 import Logo from "./Logo";
 import NavbarResponsive from "./NavbarResponsive";
+import { useContextGlobalCart } from "@/context/GlobalContext";
 
 const links = [
   { label: "Home", route: "/" },
@@ -11,6 +13,8 @@ const links = [
 ];
 
 export default function Navbar() {
+  const { openDrawer } = useContextGlobalCart();
+
   return (
     <nav className="bg-[#fff] lg:py-10 py-4 fixed left-0 right-0 lg:h-navbar h-responsiveNavbar z-50">
       {/* full screen */}
@@ -36,12 +40,15 @@ export default function Navbar() {
               <BiSearch size={20} color="#fff" />
             </div>
           </div>
-          <div className="h-12 w-[150px] rounded-[32px] bg-[#FAFAFA] flex items-center pl-1 gap-2">
+          <button
+            onClick={() => openDrawer()}
+            className="h-12 w-[150px] rounded-[32px] bg-[#FAFAFA] flex items-center pl-1 gap-2"
+          >
             <div className="bg-textPrimary h-10 w-10 rounded-full flex items-center justify-center">
               <LuShoppingCart size={20} color="#fff" />
             </div>
             <span className="text-lg text-textPrimary font-bold">Cart(0)</span>
-          </div>
+          </button>
         </div>
       </div>
       {/* responsive screen */}

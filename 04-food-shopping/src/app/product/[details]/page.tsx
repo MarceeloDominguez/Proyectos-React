@@ -23,12 +23,12 @@ export default function DetailsProduct({ params }: Prop) {
             <img
               alt="banner-shop-single"
               src={"/banner/banner-single.png"}
-              className="lg:h-[300px] w-2/4"
+              className="lg:h-[250px] w-2/4"
             />
             <img
               alt="banner-shop-single"
               src={"/banner/banner-single2.png"}
-              className="lg:h-[300px] w-2/4"
+              className="lg:h-[250px] w-2/4"
             />
             <div className="absolute top-0 right-0 left-0 bottom-0 flex justify-center items-center">
               <p className="lg:text-[70px] md:text-[40px] text-[22px] font-bold text-textPrimary">
@@ -46,7 +46,7 @@ export default function DetailsProduct({ params }: Prop) {
                   alt="imagen-del-producto"
                   width={325}
                   height={325}
-                  className="rounded-lg shadow-sm md:h-[300px] lg:h-[325px] md:w-[300px] lg:w-[325px] h-[275px] w-[275px]"
+                  className="rounded-lg shadow-sm md:h-[300px] lg:h-[340px] md:w-[300px] lg:w-[325px] h-[275px] w-[275px]"
                 />
                 <span className="bg-textPrimary absolute top-5 left-6 px-3 py-1 rounded-md">
                   <p className="text-white text-[12px] capitalize tracking-[0.5px]">

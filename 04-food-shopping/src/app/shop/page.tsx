@@ -12,12 +12,12 @@ export default function Shop() {
             <img
               alt="banner-shop-1"
               src={"/banner/banner-shop1.png"}
-              className="h-[300px] w-2/4 object-cover"
+              className="h-[250px] w-2/4 object-cover"
             />
             <img
               alt="banner-shop-2"
               src={"/banner/banner-shop2.png"}
-              className="h-[300px] w-2/4 object-cover"
+              className="h-[250px] w-2/4 object-cover"
             />
             <div className="absolute top-0 right-0 left-0 bottom-0 flex justify-center items-center">
               <p className="text-[70px] font-bold text-textPrimary">Shop</p>

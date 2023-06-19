@@ -4,17 +4,22 @@ import Logo from "./Logo";
 import { AiOutlineMenu } from "react-icons/ai";
 import { RxCross1 } from "react-icons/rx";
 import { LuShoppingCart } from "react-icons/lu";
+import { useContextGlobalCart } from "@/context/GlobalContext";
 
 export default function NavbarResponsive() {
   const [showMenu, setShowMenu] = useState(false);
+  const { openDrawer } = useContextGlobalCart();
 
   return (
     <nav className="lg:hidden flex justify-between items-center container mx-auto px-5">
       <AiOutlineMenu size={22} onClick={() => setShowMenu(true)} />
       <Logo width={100} height={54} />
-      <div className="bg-textPrimary h-8 w-8 rounded-full flex items-center justify-center">
+      <button
+        onClick={() => openDrawer()}
+        className="bg-textPrimary h-8 w-8 rounded-full flex items-center justify-center"
+      >
         <LuShoppingCart size={16} color="#fff" />
-      </div>
+      </button>
       <div
         className={`fixed left-0 top-0 bg-red-500 ${
           showMenu ? "w-[70%] h-full" : "w-0 h-0 opacity-0"
