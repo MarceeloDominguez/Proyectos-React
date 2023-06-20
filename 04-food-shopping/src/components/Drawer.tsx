@@ -2,16 +2,20 @@
 import { IoClose } from "react-icons/io5";
 import ListProductsCart from "./ListProductsCart";
 import { useContextGlobalCart } from "@/context/GlobalContext";
+import { useCartStore } from "@/store/cartStore";
 
 export default function Drawer() {
-  const { showDrawer, closeDrawer } = useContextGlobalCart();
+  const { productsCart } = useCartStore();
+  const { showDrawer, closeDrawer, priceTotalProduct } = useContextGlobalCart();
 
   if (!showDrawer) return null;
+
+  const shipping = 20;
 
   return (
     <div className="bg-slate-400/50 z-50 fixed right-0 top-0 h-full w-full">
       <div
-        style={{ scrollbarWidth: "thin" }}
+        //style={{ scrollbarWidth: "thin" }}
         className="bg-[#F9F8F8] z-50 fixed right-0 top-0 h-full lg:w-[30%] md:w-[65%] w-full rounded-tl-[20px] rounded-bl-[20px] transition-transform duration-1000 ease-in-out overflow-y-auto"
       >
         {/* <style>{`::-webkit-scrollbar { display: none;}`}</style> */}
@@ -25,8 +29,8 @@ export default function Drawer() {
             List Products
           </h3>
           <div className="pb-28">
-            {[...Array(5)].map((item, index) => (
-              <ListProductsCart key={index} />
+            {productsCart.map((item) => (
+              <ListProductsCart key={item.id} product={item} />
             ))}
           </div>
         </div>
@@ -34,13 +38,23 @@ export default function Drawer() {
           <div className="pt-2 px-6">
             <div className="flex items-center justify-between mb-4">
               <p className="text-textPrimary font-bold md:text-lg">Shipping</p>
-              <p className="text-[#525C60] font-bold md:text-lg">$100.00</p>
+              <p className="text-[#525C60] font-bold md:text-lg">
+                {shipping.toLocaleString("as-AR", {
+                  style: "currency",
+                  currency: "ARS",
+                })}
+              </p>
             </div>
             <div className="flex items-center justify-between">
               <p className="text-textPrimary font-bold md:text-lg">
                 Price total
               </p>
-              <p className="text-[#525C60] font-bold md:text-lg">$100.00</p>
+              <p className="text-[#525C60] font-bold md:text-lg">
+                {(priceTotalProduct + shipping).toLocaleString("as-AR", {
+                  style: "currency",
+                  currency: "ARS",
+                })}
+              </p>
             </div>
           </div>
         </div>

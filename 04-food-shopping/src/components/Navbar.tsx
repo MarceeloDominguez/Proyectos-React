@@ -5,6 +5,7 @@ import { LuShoppingCart } from "react-icons/lu";
 import Logo from "./Logo";
 import NavbarResponsive from "./NavbarResponsive";
 import { useContextGlobalCart } from "@/context/GlobalContext";
+import { useCartStore } from "@/store/cartStore";
 
 const links = [
   { label: "Home", route: "/" },
@@ -14,6 +15,7 @@ const links = [
 
 export default function Navbar() {
   const { openDrawer } = useContextGlobalCart();
+  const { productsCart } = useCartStore();
 
   return (
     <nav className="bg-[#fff] lg:py-10 py-4 fixed left-0 right-0 lg:h-navbar h-responsiveNavbar z-50">
@@ -47,7 +49,9 @@ export default function Navbar() {
             <div className="bg-textPrimary h-10 w-10 rounded-full flex items-center justify-center">
               <LuShoppingCart size={20} color="#fff" />
             </div>
-            <span className="text-lg text-textPrimary font-bold">Cart(0)</span>
+            <span className="text-lg text-textPrimary font-bold">
+              Cart({productsCart.length})
+            </span>
           </button>
         </div>
       </div>

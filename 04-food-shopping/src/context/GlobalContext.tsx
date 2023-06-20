@@ -1,4 +1,5 @@
 "use client";
+import { useCartStore } from "@/store/cartStore";
 import { createContext, useContext, useState } from "react";
 
 type Prop = {
@@ -9,11 +10,13 @@ type ContextProp = {
   showDrawer: boolean;
   openDrawer: () => void;
   closeDrawer: () => void;
+  priceTotalProduct: number;
 };
 
 const ContextCart = createContext({} as ContextProp);
 
 export const GlobalContextCart = ({ children }: Prop) => {
+  const { productsCart } = useCartStore();
   const [showDrawer, setShowDrawer] = useState(false);
 
   const openDrawer = () => {
@@ -24,8 +27,14 @@ export const GlobalContextCart = ({ children }: Prop) => {
     setShowDrawer(false);
   };
 
+  const priceTotalProduct = productsCart.reduce((acc, item) => {
+    return acc + item.quantity * Number(item.price);
+  }, 0);
+
   return (
-    <ContextCart.Provider value={{ showDrawer, openDrawer, closeDrawer }}>
+    <ContextCart.Provider
+      value={{ showDrawer, openDrawer, closeDrawer, priceTotalProduct }}
+    >
       {children}
     </ContextCart.Provider>
   );

@@ -7,6 +7,7 @@ export const products: Product[] = [
     price: "13.00",
     category: "vegetable",
     id: "1",
+    quantity: 0,
   },
   {
     image: "/products/producto-2.png",
@@ -14,6 +15,7 @@ export const products: Product[] = [
     price: "14.00",
     category: "fresh",
     id: "2",
+    quantity: 0,
   },
   {
     image: "/products/producto-3.png",
@@ -21,6 +23,7 @@ export const products: Product[] = [
     price: "15.00",
     category: "Millets",
     id: "3",
+    quantity: 0,
   },
   {
     image: "/products/producto-4.png",
@@ -28,6 +31,7 @@ export const products: Product[] = [
     price: "17.00",
     category: "vegetable",
     id: "4",
+    quantity: 0,
   },
   {
     image: "/products/producto-5.png",
@@ -35,6 +39,7 @@ export const products: Product[] = [
     price: "11.00",
     category: "health",
     id: "5",
+    quantity: 0,
   },
   {
     image: "/products/producto-6.png",
@@ -42,6 +47,7 @@ export const products: Product[] = [
     price: "12.00",
     category: "nuts",
     id: "6",
+    quantity: 0,
   },
   {
     image: "/products/producto-7.png",
@@ -49,6 +55,7 @@ export const products: Product[] = [
     price: "17.00",
     category: "fresh",
     id: "7",
+    quantity: 0,
   },
   {
     image: "/products/producto-8.png",
@@ -56,6 +63,7 @@ export const products: Product[] = [
     price: "15.00",
     category: "fresh",
     id: "8",
+    quantity: 0,
   },
   {
     image: "/products/producto-9.png",
@@ -63,6 +71,7 @@ export const products: Product[] = [
     price: "11.00",
     category: "health",
     id: "9",
+    quantity: 0,
   },
   {
     image: "/products/producto-10.png",
@@ -70,6 +79,7 @@ export const products: Product[] = [
     price: "12.00",
     category: "nuts",
     id: "10",
+    quantity: 0,
   },
   {
     image: "/products/producto-11.png",
@@ -77,6 +87,7 @@ export const products: Product[] = [
     price: "17.00",
     category: "fresh",
     id: "11",
+    quantity: 0,
   },
   {
     image: "/products/producto-12.png",
@@ -84,5 +95,6 @@ export const products: Product[] = [
     price: "15.00",
     category: "fresh",
     id: "12",
+    quantity: 0,
   },
 ];

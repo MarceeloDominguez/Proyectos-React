@@ -1,8 +1,10 @@
+"use client";
 import Footer from "@/components/Footer";
 import Newsletter from "@/components/Newsletter";
 import RandomProduct from "@/components/RandomProduct";
 import TabsDescriptionProduct from "@/components/TabsDescriptionProduct";
 import { products } from "@/data/products";
+import { useCartStore } from "@/store/cartStore";
 import Image from "next/image";
 import { AiOutlineArrowRight, AiTwotoneStar } from "react-icons/ai";
 
@@ -11,8 +13,17 @@ type Prop = {
 };
 
 export default function DetailsProduct({ params }: Prop) {
+  const { addProductToCart, productsCart } = useCartStore();
   const { details } = params;
   const productDetails = products.find((item) => item.id === details);
+
+  const productInCart = productsCart.find(
+    (item) => item.id === productDetails?.id
+  );
+
+  const handleAddToCart = () => {
+    addProductToCart(productDetails!);
+  };
 
   return (
     <div className="lg:pt-[144px] pt-[70px] overflow-hidden bg-[#F9F8F8]">
@@ -84,9 +95,13 @@ export default function DetailsProduct({ params }: Prop) {
                   genetically modified organisms (GMOs).
                 </p>
               </div>
-              <button className="w-[220px] bg-[#274C5B] py-4 rounded-[8px] flex justify-center">
+              <button
+                onClick={handleAddToCart}
+                className="w-[220px] bg-[#274C5B] py-4 rounded-[8px] flex justify-center"
+                disabled={productInCart ? true : false}
+              >
                 <span className="text-sm font-semibold flex items-center gap-2 text-white">
-                  Add To Cart
+                  {productInCart ? "Product in Cart" : "Add To Cart"}
                   <div className="rounded-full w-5 h-5 bg-[#335B6B] flex justify-center items-center">
                     <AiOutlineArrowRight size={12} color="#fff" />
                   </div>
