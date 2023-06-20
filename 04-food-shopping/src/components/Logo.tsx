@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Link from "next/link";
 
 type Prop = {
@@ -9,7 +8,7 @@ type Prop = {
 export default function Logo({ width, height }: Prop) {
   return (
     <Link href={"/"}>
-      <Image src="/logo.svg" alt="Logo" width={width} height={height} />
+      <img src="/logo2.png" alt="Logo" width={width} height={height} />
     </Link>
   );
 }
