@@ -8,7 +8,7 @@ type Prop = {
 export default function Logo({ width, height }: Prop) {
   return (
     <Link href={"/"}>
-      <img src="/logo2.png" alt="Logo" width={width} height={height} />
+      <img src="/Logo2.png" alt="Logo" width={width} height={height} />
     </Link>
   );
 }
