@@ -15,6 +15,7 @@ export const useFetchById = (id: string) => {
       setLoading(false);
     } catch (error) {
       console.log(error);
+      setLoading(false);
     }
   };
 

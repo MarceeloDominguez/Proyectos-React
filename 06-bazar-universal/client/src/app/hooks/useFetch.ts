@@ -16,6 +16,7 @@ export const useFetch = (textValue: string) => {
       setLoading(false);
     } catch (error) {
       console.log(error);
+      setLoading(false);
     }
   };
 

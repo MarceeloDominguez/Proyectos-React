@@ -10,6 +10,7 @@ import Product from "@/components/Product";
 import Loading from "@/components/Loading";
 import { useRouter } from "next/navigation";
 import url from "url";
+import Footer from "@/components/Footer";
 
 interface SearchParams {
   search: string;
@@ -55,48 +56,51 @@ export default function ItemsPage({ searchParams }: Prop) {
   };
 
   return (
-    <div className="min-h-screen bg-slate-100 px-6">
-      <header className="flex flex-col px-1">
-        <section className="flex justify-between py-3">
-          <Logo />
-          <div className="w-12 flex justify-center items-center text-slate-900">
-            <HiOutlineShoppingBag size={24} />
-          </div>
-        </section>
-        <form onSubmit={handleSubmit} className="flex flex-row gap-2 py-2">
-          <input
-            value={textValue}
-            onChange={(e) => setTextValue(e.target.value)}
-            placeholder="Buscar un producto..."
-            className="bg-slate-300 w-[100%] h-10 p-2 rounded-lg placeholder:text-slate-600 placeholder:text-sm focus:outline-none"
-          />
-          <button
-            onClick={() => setSent(true)}
-            className="bg-[#53B175] rounded-lg w-14 flex justify-center items-center text-slate-100"
-          >
-            <BsSearch />
-          </button>
-        </form>
-      </header>
+    <div className="flex flex-col min-h-screen justify-between bg-slate-100">
+      <div className="lg:w-3/5 md:w-3/4 container mx-auto px-6">
+        <header className="flex flex-col px-1">
+          <section className="flex justify-between py-3">
+            <Logo />
+            <div className="w-12 flex justify-center items-center text-slate-900">
+              <HiOutlineShoppingBag size={24} />
+            </div>
+          </section>
+          <form onSubmit={handleSubmit} className="flex flex-row gap-2 py-2">
+            <input
+              value={textValue}
+              onChange={(e) => setTextValue(e.target.value)}
+              placeholder="Buscar un producto..."
+              className="bg-slate-300 w-[100%] md:w-[45%] h-10 p-2 rounded-lg placeholder:text-slate-600 placeholder:text-sm focus:outline-none"
+            />
+            <button
+              onClick={() => setSent(true)}
+              className="bg-[#53B175] rounded-lg w-14 flex justify-center items-center text-slate-100"
+            >
+              <BsSearch />
+            </button>
+          </form>
+        </header>
 
-      {loading ? (
-        <Loading />
-      ) : (
-        <>
-          {textValue !== "" && sent && (
-            <>
-              <AmountResults value={textValue} products={products} />
-              <TagsCategories products={products} />
-            </>
-          )}
+        {loading ? (
+          <Loading />
+        ) : (
+          <>
+            {textValue !== "" && sent && (
+              <>
+                <AmountResults value={textValue} products={products} />
+                <TagsCategories products={products} />
+              </>
+            )}
 
-          <div className="p-1">
-            {products.map((item) => (
-              <Product product={item} key={item.id} />
-            ))}
-          </div>
-        </>
-      )}
+            <div className="p-1 grid lg:grid-cols-2 lg:gap-x-10">
+              {products.map((item) => (
+                <Product product={item} key={item.id} />
+              ))}
+            </div>
+          </>
+        )}
+      </div>
+      <Footer />
     </div>
   );
 }

@@ -4,7 +4,7 @@ import SearchProducts from "@/components/SearchProducts";
 export default function Home() {
   return (
     <main className="min-h-screen bg-slate-100">
-      <div className="min-h-screen container mx-auto flex justify-center items-center">
+      <div className="min-h-screen md:w-3/4 lg:w-2/5 container mx-auto flex justify-center items-center">
         <div className="flex-auto">
           <ImageHome />
           <h1 className="font-bold text-3xl text-center my-6 text-slate-900">

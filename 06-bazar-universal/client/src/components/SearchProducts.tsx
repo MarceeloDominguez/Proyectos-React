@@ -6,7 +6,7 @@ export default function SearchProducts() {
   const [textValue, setTextValue] = useState("");
 
   return (
-    <div className="flex py-3 px-6 flex-col gap-4">
+    <div className="flex py-3 px-6 md:max-w-xl mx-auto flex-col gap-4">
       <div>
         <input
           placeholder="Buscar... Ej: Laptop, iPhone, MacBook..."

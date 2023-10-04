@@ -19,13 +19,13 @@ export default function Product({ product }: Props) {
 
   return (
     <Link href={`/product/${id}`}>
-      <div className="flex my-4 gap-3 p-1 cursor-pointer">
+      <div className="flex my-4 lg:my-4 gap-3 p-1 cursor-pointer">
         <img
           src={thumbnail}
           alt="product-img"
           className="w-32 h-32 min-w-[128px] min-h-[128px] object-contain bg-slate-100 rounded-xl shadow-lg"
         />
-        <div className="flex flex-col gap-2 justify-between">
+        <div className="flex flex-col gap-2 justify-between px-2 flex-auto">
           <div>
             <h2 className="line-clamp-1 text-md font-medium text-slate-900">
               {title}
