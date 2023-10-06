@@ -6,7 +6,7 @@ export function Providers({ children }: { children: React.ReactNode }) {
 
   useEffect(() => {
     setMounted(true);
-  }, []);
+  }, [mounted]);
 
   if (mounted) {
     return <>{children}</>;

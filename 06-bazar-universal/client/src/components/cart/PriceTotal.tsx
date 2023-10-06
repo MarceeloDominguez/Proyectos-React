@@ -19,9 +19,9 @@ export default function PriceTotal() {
 
   return (
     <div className="mt-10">
-      <h3 className="text-lg text-slate-900 font-bold">
+      <p className="text-lg text-slate-900 font-bold">
         Precio final: <span>${priceTotal}</span>
-      </h3>
+      </p>
       <div className="flex mt-4">
         <button className="bg-[#53B175] md:w-[50%] w-full flex items-center justify-center h-10 rounded-xl text-slate-100 font-bold text-sm">
           Comprar ahora

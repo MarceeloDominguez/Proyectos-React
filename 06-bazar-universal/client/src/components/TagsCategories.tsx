@@ -21,9 +21,9 @@ export default function TagsCategories({ products }: Props) {
           key={index}
           className="bg-[#53B175] rounded-full px-3 h-8 flex items-center shadow-md"
         >
-          <span className="text-sm text-slate-100 capitalize">
+          <p className="text-sm text-slate-100 capitalize">
             {item.category} - {item.numProducts}
-          </span>
+          </p>
         </div>
       ))}
     </div>

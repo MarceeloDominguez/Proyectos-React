@@ -15,7 +15,7 @@ export default function ContentCardProduct({
 }: Props) {
   return (
     <div className="flex justify-between">
-      <h2
+      <p
         className={`${
           changeSize ? "md:text-4xl text-lg" : "text-md"
         } text-slate-900 font-medium`}
@@ -28,7 +28,7 @@ export default function ContentCardProduct({
         >
           {discountPercentage.toFixed(0)}% OFF
         </span>
-      </h2>
+      </p>
       <div className="flex items-center gap-1">
         <AiFillStar color="#FFB000" />{" "}
         <span
