@@ -10,6 +10,10 @@ export async function ProductModel({ q: titleToSearch }) {
   }
 }
 
+export async function AllProductsModel() {
+  return products;
+}
+
 export async function ProductByIdModel(id) {
   const product = products.find((product) => product.id === id);
 

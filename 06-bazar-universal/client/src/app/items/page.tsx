@@ -1,9 +1,7 @@
 "use client";
 import { useEffect, useState } from "react";
-import { useFetch } from "../hooks/useFetch";
+import { useFetch } from "../../hooks/useFetch";
 import { BsSearch } from "react-icons/bs";
-import { HiOutlineShoppingBag } from "react-icons/hi";
-import Logo from "@/components/Logo";
 import AmountResults from "@/components/AmountResults";
 import TagsCategories from "@/components/TagsCategories";
 import Product from "@/components/Product";
@@ -11,6 +9,7 @@ import Loading from "@/components/Loading";
 import { useRouter } from "next/navigation";
 import url from "url";
 import Footer from "@/components/Footer";
+import Navbar from "@/components/Navbar";
 
 interface SearchParams {
   search: string;
@@ -59,17 +58,12 @@ export default function ItemsPage({ searchParams }: Prop) {
     <div className="flex flex-col min-h-screen justify-between bg-slate-100">
       <div className="lg:w-3/5 md:w-3/4 container mx-auto px-6">
         <header className="flex flex-col px-1">
-          <section className="flex justify-between py-3">
-            <Logo />
-            <div className="w-12 flex justify-center items-center text-slate-900">
-              <HiOutlineShoppingBag size={24} />
-            </div>
-          </section>
+          <Navbar />
           <form onSubmit={handleSubmit} className="flex flex-row gap-2 py-2">
             <input
               value={textValue}
               onChange={(e) => setTextValue(e.target.value)}
-              placeholder="Buscar un producto..."
+              placeholder="Buscar... Ej: Laptop, iPhone, MacBook..."
               className="bg-slate-300 w-[100%] md:w-[45%] h-10 p-2 rounded-lg placeholder:text-slate-600 placeholder:text-sm focus:outline-none"
             />
             <button

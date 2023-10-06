@@ -1,4 +1,8 @@
-import { ProductByIdModel, ProductModel } from "../models/product-models.js";
+import {
+  ProductByIdModel,
+  ProductModel,
+  AllProductsModel,
+} from "../models/product-models.js";
 
 export async function GetProducts(req, res) {
   const { q } = req.query;
@@ -6,6 +10,12 @@ export async function GetProducts(req, res) {
   const products = await ProductModel({ q });
 
   res.json(products);
+}
+
+export async function GetAllProducts(req, res) {
+  const product = await AllProductsModel();
+
+  res.json(product);
 }
 
 export async function GetProductsById(req, res) {

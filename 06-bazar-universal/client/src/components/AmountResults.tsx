@@ -1,4 +1,4 @@
-import { Product } from "@/app/interface/products";
+import { Product } from "@/interface/products";
 import React from "react";
 
 type Props = {

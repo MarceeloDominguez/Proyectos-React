@@ -10,4 +10,5 @@ export interface Product {
   stock: 36;
   thumbnail: string;
   title: string;
+  quantity: number;
 }

@@ -1,12 +1,12 @@
 "use client";
-import { HiOutlineShoppingBag } from "react-icons/hi";
-import { useFetchById } from "@/app/hooks/useFetchById";
-import Logo from "@/components/Logo";
+import { useFetchById } from "@/hooks/useFetchById";
 import Images from "@/components/details/Images";
 import Loading from "@/components/Loading";
 import ContentCardProduct from "@/components/ContentCardProduct";
-import AddToCart from "@/components/details/AddToCart";
+import AddToCart from "@/components/AddToCart";
 import Footer from "@/components/Footer";
+import Navbar from "@/components/Navbar";
+import { useCartStore } from "@/store/cartStore";
 
 type Props = {
   params: { id: string };
@@ -23,18 +23,25 @@ export default function DetailsProduct({ params }: Props) {
     description,
     loading,
     stock,
+    id: idProduct,
   } = useFetchById(id);
+  const { productsInCart } = useCartStore();
+
+  const cartItem = productsInCart.find((item) => item.id === Number(id));
+
+  let quantityInCart;
+
+  if (cartItem) {
+    quantityInCart = cartItem.quantity;
+  } else {
+    quantityInCart = 0;
+  }
 
   return (
     <div className="bg-slate-100 flex flex-col justify-between min-h-screen">
       <div className="lg:w-3/5 md:w-3/4 container mx-auto px-6">
         <header>
-          <section className="flex justify-between py-3">
-            <Logo />
-            <div className="w-12 flex justify-center items-center text-slate-900">
-              <HiOutlineShoppingBag size={24} />
-            </div>
-          </section>
+          <Navbar logo={false} />
         </header>
         {loading ? (
           <Loading />
@@ -59,12 +66,18 @@ export default function DetailsProduct({ params }: Props) {
                 <p className="mt-6 text-slate-600 text-sm md:text-lg line-clamp-[10]">
                   {description}
                 </p>
-                <AddToCart stock={stock!} />
+                <div className="mt-6">
+                  <AddToCart
+                    stock={stock!}
+                    id={idProduct!}
+                    quantity={quantityInCart}
+                  />
+                </div>
               </div>
               <div>
                 <div className="my-4 h-[25vh] sm:h-[10vh] flex flex-col justify-end lg:mb-8">
                   <button className="bg-[#53B175] md:w-[50%] w-full flex items-center justify-center h-10 rounded-xl text-slate-100 font-bold text-sm">
-                    Comprar
+                    Comprar ahora
                   </button>
                 </div>
               </div>

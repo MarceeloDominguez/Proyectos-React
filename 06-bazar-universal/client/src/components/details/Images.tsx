@@ -30,7 +30,7 @@ export default function Images({ images }: Props) {
               src={item}
               onClick={() => setImage(item)}
               alt="image-1"
-              className={`w-14 h-14 min-w-[56px] object-contain mb-2 md:mb-4 bg-white rounded-xl border-solid ${
+              className={`w-14 h-14 min-w-[56px] object-contain mb-2 md:mb-4 bg-white rounded-xl border-solid cursor-pointer ${
                 item === image ? "border-2 border-[#53B175]" : "border-2"
               }`}
             />

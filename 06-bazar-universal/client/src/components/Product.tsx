@@ -1,4 +1,4 @@
-import { Product } from "@/app/interface/products";
+import { Product } from "@/interface/products";
 import ContentCardProduct from "./ContentCardProduct";
 import Link from "next/link";
 
@@ -19,7 +19,7 @@ export default function Product({ product }: Props) {
 
   return (
     <Link href={`/product/${id}`}>
-      <div className="flex my-4 lg:my-4 gap-3 p-1 cursor-pointer">
+      <div className="flex my-4 lg:my-4 gap-3 p-1 lg:p-2 cursor-pointer hover:bg-slate-200 rounded-xl transition-all duration-200 ease-linear">
         <img
           src={thumbnail}
           alt="product-img"
