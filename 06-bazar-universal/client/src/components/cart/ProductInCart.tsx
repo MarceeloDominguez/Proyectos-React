@@ -2,6 +2,7 @@
 import AddToCart from "../AddToCart";
 import { Product } from "@/interface/products";
 import { useCartStore } from "@/store/cartStore";
+import PriceTotal from "./PriceTotal";
 
 type Props = {
   product: Product;

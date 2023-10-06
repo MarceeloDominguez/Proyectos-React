@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { Product } from "../interface/products";
+import { baseUrl } from "@/api/api";
 
 export const useFetchById = (id: string) => {
   const [product, setProduct] = useState<Product | null>(null);
@@ -8,7 +9,7 @@ export const useFetchById = (id: string) => {
   const getDataById = async () => {
     setLoading(true);
     try {
-      const resp = await fetch(`http://localhost:5000/api/items/${id}`);
+      const resp = await fetch(`${baseUrl}/api/items/${id}`);
       const data = await resp.json();
 
       setProduct(data);

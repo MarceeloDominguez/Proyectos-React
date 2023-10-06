@@ -26,7 +26,7 @@ export default function ContentCardProduct({
             changeSize ? "md:text-xl text-xs" : "text-xs"
           } font-bold text-[#53B175]`}
         >
-          {discountPercentage.toFixed(0)}% OFF
+          {discountPercentage?.toFixed(0)}% OFF
         </span>
       </p>
       <div className="flex items-center gap-1">
@@ -36,7 +36,7 @@ export default function ContentCardProduct({
             changeSize ? "md:text-lg text-xs" : "text-xs "
           } font-medium text-slate-900`}
         >
-          {rating.toFixed(1)}
+          {rating?.toFixed(1)}
         </span>
       </div>
     </div>
