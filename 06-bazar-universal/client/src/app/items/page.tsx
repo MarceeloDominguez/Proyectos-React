@@ -33,20 +33,20 @@ export default function ItemsPage({ searchParams }: Prop) {
     }
   }, [textValue]);
 
-  useEffect(() => {
-    if (textValue.trim() === "") {
-      router.replace("/items?search=");
-    } else {
-      const searchUrl = url.format({
-        pathname: "/items",
-        query: {
-          search: textValue,
-        },
-      });
+  // useEffect(() => {
+  //   if (textValue.trim() === "") {
+  //     router.replace("/items?search=");
+  //   } else {
+  //     const searchUrl = url.format({
+  //       pathname: "/items",
+  //       query: {
+  //         search: textValue,
+  //       },
+  //     });
 
-      router.push(searchUrl);
-    }
-  }, [textValue]);
+  //     router.push(searchUrl);
+  //   }
+  // }, [textValue]);
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
