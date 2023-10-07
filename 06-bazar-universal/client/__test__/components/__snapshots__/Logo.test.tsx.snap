@@ -1,0 +1,99 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[` 1`] = `
+<div>
+  <a
+    href="/"
+  >
+    <p
+      class="font-bold text-[#53B175] text-lg"
+    >
+      T-Online
+    </p>
+  </a>
+</div>
+`;
+
+exports[`<Logo /> Should render the logo 1`] = `
+<div>
+  <a
+    href="/"
+  >
+    <p
+      class="font-bold text-[#53B175] text-lg"
+    >
+      T-Online
+    </p>
+  </a>
+</div>
+`;
+
+exports[`<Logo /> render logo 1`] = `
+<div>
+  <a
+    href="/"
+  >
+    <p
+      class="font-bold text-[#53B175] text-lg"
+    >
+      T-Online
+    </p>
+  </a>
+</div>
+`;
+
+exports[`<Logo /> should render the logo 1`] = `
+<div>
+  <a
+    href="/"
+  >
+    <p
+      class="font-bold text-[#53B175] text-lg"
+    >
+      T-Online
+    </p>
+  </a>
+</div>
+`;
+
+exports[`Logo  1`] = `
+<div>
+  <a
+    href="/"
+  >
+    <p
+      class="font-bold text-[#53B175] text-lg"
+    >
+      T-Online
+    </p>
+  </a>
+</div>
+`;
+
+exports[`Logo render logo 1`] = `
+<div>
+  <a
+    href="/"
+  >
+    <p
+      class="font-bold text-[#53B175] text-lg"
+    >
+      T-Online
+    </p>
+  </a>
+</div>
+`;
+
+exports[`Logo render logo and show the text 1`] = `
+<div>
+  <a
+    href="/"
+  >
+    <p
+      class="font-bold text-[#53B175] text-lg"
+    >
+      T-Online
+    </p>
+  </a>
+</div>
+`;
