@@ -10,19 +10,15 @@ import { useRouter } from "next/navigation";
 import url from "url";
 import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
+import { useSearchParams } from "next/navigation";
 
-interface SearchParams {
-  search: string;
-}
-
-type Prop = {
-  searchParams: SearchParams;
-};
-
-export default function ItemsPage({ searchParams }: Prop) {
-  const { search } = searchParams;
+export default function ItemsPage() {
+  const searchParams = useSearchParams();
+  const search = searchParams.get("search");
+  const resultParams = JSON.parse(search!);
   const router = useRouter();
-  const [textValue, setTextValue] = useState(search || "");
+  const [textValue, setTextValue] = useState(resultParams || "");
+
   const [sent, setSent] = useState(true);
   const { products, getData, setProducts, loading } = useFetch(textValue);
 
@@ -33,20 +29,20 @@ export default function ItemsPage({ searchParams }: Prop) {
     }
   }, [textValue]);
 
-  // useEffect(() => {
-  //   if (textValue.trim() === "") {
-  //     router.replace("/items?search=");
-  //   } else {
-  //     const searchUrl = url.format({
-  //       pathname: "/items",
-  //       query: {
-  //         search: textValue,
-  //       },
-  //     });
+  useEffect(() => {
+    if (textValue.trim() === "") {
+      router.replace(`/items?search=""`);
+    } else {
+      const searchUrl = url.format({
+        pathname: "/items",
+        query: {
+          search: JSON.stringify(textValue),
+        },
+      });
 
-  //     router.push(searchUrl);
-  //   }
-  // }, [textValue]);
+      router.push(searchUrl);
+    }
+  }, [textValue]);
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();

@@ -17,9 +17,12 @@ describe("<SearchProduct />", () => {
     expect(buttonElement).toBeInTheDocument();
 
     fireEvent.click(buttonElement);
-    expect(screen.getByRole("link")).toHaveAttribute(
-      "href",
-      "/items?search=laptop"
-    );
+
+    const hrefAttribute = screen.getByRole("link").getAttribute("href");
+    const normalizedHref = hrefAttribute
+      ? decodeURIComponent(hrefAttribute)
+      : "";
+
+    expect(normalizedHref).toBe('/items?search="laptop"');
   });
 });
