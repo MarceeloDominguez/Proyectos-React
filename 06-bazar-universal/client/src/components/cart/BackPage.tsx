@@ -9,7 +9,7 @@ export default function BackPage() {
     <div>
       <button
         onClick={() => router.back()}
-        className="flex items-center gap-3 text-slate-400 font-semibold"
+        className="flex items-center gap-3 text-slate-400 dark:text-slate-100 font-semibold"
       >
         <BiArrowBack size={20} /> Atras
       </button>

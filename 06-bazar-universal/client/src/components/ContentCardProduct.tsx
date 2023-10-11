@@ -18,7 +18,7 @@ export default function ContentCardProduct({
       <p
         className={`${
           changeSize ? "md:text-4xl text-lg" : "text-md"
-        } text-slate-900 font-medium`}
+        } text-slate-900 dark:text-slate-100 font-medium`}
       >
         ${price}{" "}
         <span
@@ -34,7 +34,7 @@ export default function ContentCardProduct({
         <span
           className={`${
             changeSize ? "md:text-lg text-xs" : "text-xs "
-          } font-medium text-slate-900`}
+          } font-medium text-slate-900 dark:text-slate-100`}
         >
           {rating?.toFixed(1)}
         </span>

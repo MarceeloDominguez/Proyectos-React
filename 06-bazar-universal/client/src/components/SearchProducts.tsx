@@ -12,7 +12,7 @@ export default function SearchProducts() {
           placeholder="Buscar... Ej: Laptop, iPhone, MacBook..."
           value={textValue}
           onChange={(e) => setTextValue(e.target.value)}
-          className="bg-slate-300 w-[100%] h-10 p-2 rounded-xl placeholder:text-slate-600 placeholder:text-sm focus:outline-none"
+          className="bg-slate-300 dark:bg-slate-600 w-[100%] h-10 p-2 rounded-xl placeholder:text-slate-600 dark:placeholder:text-slate-300 placeholder:text-sm focus:outline-none dark:text-slate-100"
         />
       </div>
       <div className="bg-[#53B175] h-10 rounded-xl">

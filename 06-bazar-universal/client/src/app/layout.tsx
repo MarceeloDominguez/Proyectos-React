@@ -2,6 +2,7 @@ import "./globals.css";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import { Providers } from "./providers";
+import { Suspense } from "react";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -18,7 +19,20 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <Providers>{children}</Providers>
+        <Providers>
+          <Suspense
+            fallback={
+              <div className="min-h-screen dark:bg-gray-800 bg-slate-100 flex justify-center items-center">
+                <div
+                  className="inline-block text-[#53B175] h-8 w-8 animate-spin rounded-full border-4 border-solid border-current border-r-transparent align-[-0.125em] motion-reduce:animate-[spin_1.5s_linear_infinite]"
+                  role="status"
+                />
+              </div>
+            }
+          >
+            <main className="dark:bg-gray-800 bg-slate-100">{children}</main>
+          </Suspense>
+        </Providers>
       </body>
     </html>
   );

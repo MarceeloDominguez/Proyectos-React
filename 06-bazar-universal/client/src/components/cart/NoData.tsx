@@ -1,7 +1,7 @@
 export default function NoData() {
   return (
     <div className="flex flex-col mt-14">
-      <p className="text-slate-900 font-medium text-center text-lg py-2">
+      <p className="text-slate-900 dark:text-slate-100 font-medium text-center text-lg py-2">
         Aún no has comprado nada!
       </p>
       <div className="h-[40vh] flex items-center justify-center">

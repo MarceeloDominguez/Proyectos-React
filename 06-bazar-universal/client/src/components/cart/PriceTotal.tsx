@@ -19,7 +19,7 @@ export default function PriceTotal() {
 
   return (
     <div className="mt-10">
-      <p className="text-lg text-slate-900 font-bold">
+      <p className="text-lg text-slate-900 dark:text-slate-100 font-bold">
         Precio Final: <span>${priceTotal}</span>
       </p>
       <div className="flex py-4">

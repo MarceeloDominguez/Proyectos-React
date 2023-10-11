@@ -38,7 +38,7 @@ export default function DetailsProduct({ params }: Props) {
   }
 
   return (
-    <div className="bg-slate-100 flex flex-col justify-between min-h-screen">
+    <div className="flex flex-col justify-between min-h-screen">
       <div className="lg:w-3/5 md:w-3/4 container mx-auto px-6">
         <header>
           <Navbar logo={false} />
@@ -60,10 +60,10 @@ export default function DetailsProduct({ params }: Props) {
             </div>
             <div className="lg:px-10 flex flex-col justify-between">
               <div>
-                <h2 className="lg:mt-6 mt-3 mb-2 md:text-2xl text-xl font-bold text-slate-900 line-clamp-2">
+                <h2 className="lg:mt-6 mt-3 mb-2 md:text-2xl text-xl font-bold text-slate-900 dark:text-slate-100 line-clamp-2">
                   {title}
                 </h2>
-                <p className="mt-6 text-slate-600 text-sm md:text-lg line-clamp-[10]">
+                <p className="mt-6 text-slate-600 dark:text-slate-400 text-sm md:text-lg line-clamp-[10]">
                   {description}
                 </p>
                 <div className="mt-6">

@@ -51,7 +51,7 @@ export default function ItemsPage() {
   };
 
   return (
-    <div className="flex flex-col min-h-screen justify-between bg-slate-100">
+    <div className="flex flex-col min-h-screen justify-between">
       <div className="lg:w-3/5 md:w-3/4 container mx-auto px-6">
         <header className="flex flex-col px-1">
           <Navbar />
@@ -60,7 +60,7 @@ export default function ItemsPage() {
               value={textValue}
               onChange={(e) => setTextValue(e.target.value)}
               placeholder="Buscar... Ej: Laptop, iPhone, MacBook..."
-              className="bg-slate-300 w-[100%] md:w-[45%] h-10 p-2 rounded-lg placeholder:text-slate-600 placeholder:text-sm focus:outline-none"
+              className="bg-slate-300 dark:bg-slate-600 w-[100%] md:w-[45%] h-10 p-2 rounded-lg placeholder:text-slate-600 dark:placeholder:text-slate-300 placeholder:text-sm focus:outline-none dark:text-slate-100"
             />
             <button
               onClick={() => setSent(true)}

@@ -20,7 +20,7 @@ export default function Images({ images }: Props) {
           <img
             src={image!}
             alt="imagen principal"
-            className="md:w-[420px] md:h-[420px] w-56 h-56 min-w-[224px] min-h-[224px] object-contain flex-1 bg-slate-100 shadow-lg rounded-xl"
+            className="md:w-[420px] md:h-[420px] w-56 h-56 min-w-[224px] min-h-[224px] object-contain flex-1 bg-slate-100 dark:bg-slate-700 shadow-lg rounded-xl"
           />
         </div>
         <div className="flex flex-col px-2">
@@ -30,7 +30,7 @@ export default function Images({ images }: Props) {
               src={item}
               onClick={() => setImage(item)}
               alt="image-1"
-              className={`w-14 h-14 min-w-[56px] object-contain mb-2 md:mb-4 bg-white rounded-xl border-solid cursor-pointer ${
+              className={`w-14 h-14 min-w-[56px] object-contain mb-2 md:mb-4 bg-white dark:bg-slate-700 rounded-xl border-solid cursor-pointer ${
                 item === image ? "border-2 border-[#53B175]" : "border-2"
               }`}
             />
