@@ -6,4 +6,5 @@
 |```03```| Twitter Clone | [Ver](https://github.com/MarceeloDominguez/Proyectos-React/tree/master/03-clone-twitter) | [Visitar](https://clone-twitter-03.surge.sh/)
 |```04```| Shopping cart UI | [Ver](https://github.com/MarceeloDominguez/Proyectos-React/tree/master/04-food-shopping) | [Visitar](https://04-food-shopping.vercel.app/)
 |```05```| Reading List | [Ver](https://github.com/MarceeloDominguez/Proyectos-React/tree/master/05-reading-list) | [Visitar](https://lista-de-libros.vercel.app/)
+|```05```| Bazar Universal | [Ver](https://github.com/MarceeloDominguez/Proyectos-React/tree/master/06-bazar-universal) | [Visitar](https://products-19k4qq1tm-marceelodominguez.vercel.app/)
 
